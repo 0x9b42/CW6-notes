@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+---
+{% set text = getText(paragraph_id) %}
+
+<article>
+  <div class="entry-ref">
+    <span class="verse">§{{ paragraph_id }}</span>
+    <span>{{ chapter }}</span>
+  </div>
+
+  {% if text %}
+  <div class="parallel">
+    <div>
+      <span class="lang-label">Deutsch</span>
+      <p class="de">{{ text.german | safe }}</p>
+    </div>
+    <div>
+      <span class="lang-label">English ({{ text.translator or "Hull" }})</span>
+      <p class="en">{{ text.english | safe }}</p>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="commentary">
+    {{ content | safe }}
+  </div>
+
+</article>

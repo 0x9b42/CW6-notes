@@ -1,0 +1,12 @@
+{
+  "name": "jung-syarah",
+  "version": "1.0.0",
+  "description": "Paragraph-by-paragraph commentary on Jung's Psychological Types (CW6), German-English parallel text",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

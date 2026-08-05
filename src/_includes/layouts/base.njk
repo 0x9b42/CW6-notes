@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or "Psychological Types — Notes" }}</title>
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+</head>
+<body>
+  <header class="site-header">
+    <p class="title">Psychological Types — Notes</p>
+    <p class="subtitle">Catatan pribadi membaca <em>Psychologische Typen — Collected Works, Vol. 6</em>, Carl G. Jung.</p>
+  </header>
+  <nav class="site-nav">
+    <a href="{{ '/' | url }}">entries</a>
+  </nav>
+  <main>
+    {{ content | safe }}
+  </main>
+</body>
+</html>

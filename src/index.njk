@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+title: "Psychological Types — Notes"
+---
+<ul class="entry-list">
+  {% for entry in collections.pars %}
+  <li>
+    <a href="{{ entry.url | url }}">{{ entry.data.title }}</a>
+    <span class="meta">§{{ entry.data.paragraph_id }} · {{ entry.data.chapter }}</span>
+  </li>
+  {% endfor %}
+</ul>

@@ -450,3 +450,37 @@ main {
     align-items: flex-start;
   }
 }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.pager-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--rule-soft);
+  border-radius: 999px;
+  background: var(--paper-elevated);
+  text-decoration: none;
+}
+
+.pager-link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-glow);
+}
+
+.pager-prev {
+  margin-right: auto;
+}
+
+.pager-next {
+  margin-left: auto;
+}

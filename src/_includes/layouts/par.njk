@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 ---
 {% set text = getText(paragraph_id) %}
+{% set adjacent = collections.pars | adjacentByParagraphId(paragraph_id) %}
 
 <article>
   <div class="entry-ref">
@@ -26,4 +27,13 @@ layout: layouts/base.njk
     {{ content | safe }}
   </div>
 
+  <nav class="pager" aria-label="Navigasi paragraf">
+    {% if adjacent.prev %}
+      <a class="pager-link pager-prev" href="{{ adjacent.prev.url | url }}">← Prev</a>
+    {% endif %}
+
+    {% if adjacent.next %}
+      <a class="pager-link pager-next" href="{{ adjacent.next.url | url }}">Next →</a>
+    {% endif %}
+  </nav>
 </article>
